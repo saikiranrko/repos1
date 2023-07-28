@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akrishnareddydotnetdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akrishnareddydotnetdemo
+  template:
+    metadata:
+      labels:
+        app: akrishnareddydotnetdemo 
+    spec:
+      containers:
+        - name: akrishnareddydotnetdemo 
+          image: devopspipeline1.azurecr.io/akrishnareddydotnetdemo
+          ports:
+          - containerPort: 5000
